@@ -14,7 +14,8 @@ class WordsRecommendationServiceTest extends TestCase
             "Gwiezdne wojny: Nowa nadzieja",
             "Mroczny Rycerz",
             "Władca Pierścieni: Drużyna Pierścienia",
-            "Shrek"
+            "Shrek",
+            "Szósty zmysł"
         ];
 
     public function testGetRecommendationByMaximumWords(): void
@@ -24,6 +25,7 @@ class WordsRecommendationServiceTest extends TestCase
             "Pulp Fiction",
             "Mroczny Rycerz",
             "Shrek",
+            "Szósty zmysł"
         ];
 
         $result = WordsRecommendationService::getRecommendationByMaximumWords(self::MOVIES, $maximumWords);

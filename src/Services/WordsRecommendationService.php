@@ -17,7 +17,7 @@ class WordsRecommendationService
     {
         return array_values(
             array_filter($movies, function (string $value) use ($maximumWords) {
-                return str_word_count($value) <= $maximumWords;
+                return str_word_count($value, 0, 'ąćęłńóśżźĄĆĘŁŃÓŚŻŹ') <= $maximumWords;
             })
         );
     }
