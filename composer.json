@@ -1,0 +1,16 @@
+{
+    "name": "d1ol/film-recommendation-test",
+    "description": "Test project for film recommendation service",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.4"
+    }
+}
