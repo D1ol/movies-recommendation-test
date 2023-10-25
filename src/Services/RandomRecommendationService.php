@@ -15,11 +15,16 @@ class RandomRecommendationService
      */
     public static function getRandomRecommendation(array $movies, int $count = self::COUNT): array
     {
-        $keys = array_rand($movies, $count);
+        $random = array_rand($movies, $count);
+
+        if (is_int($random))
+            return [
+                $movies[$random]
+            ];
 
         $values = [];
 
-        foreach ($keys as $key) {
+        foreach ($random as $key) {
             $values[] = $movies[$key];
         }
 
